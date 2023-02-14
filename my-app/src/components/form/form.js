@@ -1,14 +1,21 @@
 import React from "react";
 import styles from "./form.module.css";
 import Button from "./ui/button";
-import Input from "./ui/input";
+import Inform from "./ui/inForm";
 
 const Form = () => {
+  const saveForm = (event) => {
+    event.preventDefault();
+    console.log("button clicked");
+  };
+
   return (
     <div className={styles.form}>
-      <Input id="name" label="Username"></Input>
-      <Input id="age" label="Age (Years)"></Input>
-      <Button label="Add User"></Button>
+      <form onSubmit={saveForm}>
+        <Inform id="name" label="Username"></Inform>
+        <Inform id="age" label="Age (Years)"></Inform>
+        <Button label="Add User"></Button>
+      </form>
     </div>
   );
 };
