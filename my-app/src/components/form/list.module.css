@@ -1,0 +1,7 @@
+.list {
+  color: #2b2b2b;
+}
+
+.list ul li {
+  list-style: none;
+}

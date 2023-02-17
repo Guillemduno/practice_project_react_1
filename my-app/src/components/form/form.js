@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from "./form.module.css";
-import Button from "./ui/button";
+import Button from "../ui/button";
+import Card from "../ui/Card";
 
 const Form = (props) => {
   const [username, setUsername] = useState("");
@@ -29,7 +30,7 @@ const Form = (props) => {
   };
 
   return (
-    <div className={styles.form}>
+    <Card className={styles.form}>
       <form onSubmit={saveForm}>
         <div className={styles.input}>
           <label for="username">Username</label>
@@ -41,7 +42,7 @@ const Form = (props) => {
         </div>
         <Button label="Add User"></Button>
       </form>
-    </div>
+    </Card>
   );
 };
 
