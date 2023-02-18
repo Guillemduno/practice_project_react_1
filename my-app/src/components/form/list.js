@@ -5,15 +5,18 @@ import style from "./list.module.css";
 const List = (props) => {
   return (
     <Card className={style.list}>
-      <ul>
-        {props.listOfUsers.map((user) => {
-          return (
-            <li>
-              {user.nom} ( {user.edad} years old)
-            </li>
-          );
-        })}
-      </ul>
+      {/* <ul> */}
+      {props.listOfUsers.map((user) => {
+        return (
+          // <li>
+          <p>
+            {user.nom} ( {user.edad} years old)
+          </p>
+
+          // </li>
+        );
+      })}
+      {/* </ul> */}
     </Card>
   );
 };

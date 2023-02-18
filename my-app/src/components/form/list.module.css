@@ -2,12 +2,8 @@
   color: #2b2b2b;
 }
 
-.list ul {
-  margin: 0;
-}
-
-.list li {
-  list-style: none;
+.list p {
   border: 1px solid grey;
-  margin-bottom: 1em;
+  padding: 0.5em;
+  text-transform: capitalize;
 }

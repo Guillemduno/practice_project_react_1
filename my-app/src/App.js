@@ -22,7 +22,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Form onSaveUser={saveUser}></Form>
-        <List listOfUsers={users}></List>
+        {users.length > 0 && <List listOfUsers={users}></List>}
       </header>
     </div>
   );
