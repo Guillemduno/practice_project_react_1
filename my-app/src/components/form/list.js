@@ -6,7 +6,13 @@ const List = (props) => {
   return (
     <Card className={style.list}>
       <ul>
-        <li>list test</li>
+        {props.listOfUsers.map((user) => {
+          return (
+            <li>
+              {user.nom} ( {user.edad} years old)
+            </li>
+          );
+        })}
       </ul>
     </Card>
   );

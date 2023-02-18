@@ -4,20 +4,25 @@ import Form from "./components/form/form";
 import List from "./components/form/list";
 
 function App() {
-  const [username, setUsername] = useState("");
+  const [users, setUsers] = useState([]);
 
   const saveUser = (user) => {
-    console.log(user.username);
-    console.log(user.age);
-    setUsername(user.username);
+    const myUser = {
+      id: Math.random().toString(),
+      nom: user.username,
+      edad: user.age,
+    };
+
+    setUsers((users) => {
+      return [myUser, ...users];
+    });
   };
 
   return (
     <div className="App">
       <header className="App-header">
         <Form onSaveUser={saveUser}></Form>
-        <p>{username}</p>
-        <List></List>
+        <List listOfUsers={users}></List>
       </header>
     </div>
   );
